@@ -8,14 +8,16 @@ import { AppService } from "./app.service";
 import configuration from "./config/env.config";
 
 @Module({
-	imports: [
-		ConfigModule.forRoot({
-			isGlobal: true,
-			load: [configuration],
-		}),
-		EventEmitterModule.forRoot(),
-	],
-	controllers: [AppController],
-	providers: [AppService],
+    imports: [
+        ConfigModule.forRoot({
+            isGlobal: true,
+            load: [configuration],
+        }),
+        EventEmitterModule.forRoot(),
+    ],
+    controllers: [AppController],
+    providers: [AppService],
 })
 export class AppModule {}
+
+//
