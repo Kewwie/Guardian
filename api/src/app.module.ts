@@ -19,5 +19,3 @@ import configuration from "./config/env.config";
     providers: [AppService],
 })
 export class AppModule {}
-
-//
