@@ -1,10 +1,15 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
+interface Guild {
+    name: string;
+    description: string;
+}
+
 export default function Guild() {
     const router = useRouter();
     const { guildID } = router.query;
-    const [guild, setGuild] = useState(null);
+    const [guild, setGuild] = useState<Guild | null>(null);
 
     useEffect(() => {
         if (guildID) {
